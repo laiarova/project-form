@@ -1,9 +1,12 @@
 <template>
   <div v-for="potion in potionsInfo" :key="potion.id" class="boxInfo">
-    <div class="title"><p>{{ potion.name }}</p> <ButtonLike :id="potion.id"/></div>
+    <div class="title">
+      <p>{{ potion.name }}</p>
+      <ButtonLike :id="potion.id"/>
+    </div>
     <div class="boxEffects">
-      <div class="positive"><b>Effects:</b> {{ potion.effect ? potion.effect : 'not found' }}</div>
-      <div class="negative"><b>Side effects:</b> {{ potion.sideEffects ? potion.sideEffects : 'not found' }}</div>
+      <div class="positive"> <b>Effects:</b> {{ potion.effect ? potion.effect : 'not found' }}</div>
+      <div class="negative"> <b>Side effects:</b> {{ potion.sideEffects ? potion.sideEffects : 'not found' }}</div>
     </div>
   </div>
 </template>
